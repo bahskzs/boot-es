@@ -5,8 +5,13 @@
 #      username:
 #      password:
 # Rest High Level Client
-elasticsearch:
-  rest:
-    hosts: 127.0.0.1:9200
+#elasticsearch:
+#  rest:
+#    hosts: 127.0.0.1:9200
+#    username:
+#    password:
+spring:
+  elasticsearch:
+    uris: 127.0.0.1:9200
     username:
     password:

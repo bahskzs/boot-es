@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -23,7 +24,7 @@ public class TestController {
     private EsService esService;
 
     @GetMapping("/test")
-    public List<Hotel> findByTitle(@RequestParam String title) {
+    public List<Hotel> findByTitle(@RequestParam String title) throws IOException {
         List<Hotel> hotelFromTitle = esService.getHotelFromTitle(title);
         return hotelFromTitle;
 
